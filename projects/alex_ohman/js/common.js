@@ -341,7 +341,12 @@ $(function() {
 
 	/* ======= Установить отрицательный маргин для плавающего элемента ====*/
 	$(function () {
+		var carouselHeight = $(".carouselBox").height();
+		console.log(carouselHeight)
+	})
+	$(function () {
 		var artImgHeight = $(".artImg").height();
+		console.log(artImgHeight);
 		$(".floater").css("margin-top", - artImgHeight/2 + "px")
 	})
 
