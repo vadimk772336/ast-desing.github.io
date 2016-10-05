@@ -1,0 +1,773 @@
+/* Вспомогательные стили*/
+@import url('util/reset.css');
+@import url('util/clearfix.css');
+@import url('util/loader.css');
+
+/*
+===================
+ГЛОБАЛЬНЫЕ СТИЛИ
+===================
+*/
+/*Типографика*/
+body {
+	font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+}
+h2 {
+	font-size: 210%;
+	font-weight: 700;
+	margin-bottom: .7em;
+	color: #fff;
+}
+h3 {
+	font-size: 110%;
+	font-weight: 500;
+	margin-bottom: .5em;
+}
+p {
+	font-weight: 300;
+	margin-bottom: .7em;
+}
+
+/*Ссылки*/
+a {
+	color: black;
+	text-decoration: none;
+}
+
+/*Секция*/
+aside {
+	position: fixed;
+	top: 60px;
+	height: 100vh;
+	left: -26%;
+	width: 25%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 5%;
+	padding-right: 2%;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease
+	transition: all .4s ease
+
+}
+.asideActive {
+	left: 0;
+}
+.firstAside {
+	position: absolute;
+	top: 100vh;
+}
+aside p {
+	font-size: 110%;
+	color: #fff;
+}
+/*Кнопки*/
+.btn {
+	display: inline-block;
+	padding: .6em 1.1em;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 120%;
+	font-weight: 300;
+	width: auto;
+	background: rgba(0,0,0,0);
+	cursor: pointer;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.btnContainer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.btnWhite {
+	border-color: #fff;
+	color: #fff;
+}
+.btnWhite:hover {
+	background: #fff;
+	color: #000;
+}
+.btnBlack:hover {
+	background: #fff;
+	color: #000;
+}
+/*Формы*/
+input, 
+textarea,
+select {
+	display: block;
+	font-size: 120%;
+	font-weight: 300;
+	padding: .4em .8em;
+	margin-bottom: .6em;
+	width: 100%;
+	border: 0;
+}
+textarea {
+	height: 100px;
+}
+legend {
+	font-size: 150%;
+	font-weight: 300;
+	margin-bottom: .6em;
+}
+/*Форма  для белого фона*/
+.formWhite input,
+.formWhite select,
+.formWhite textarea {
+	border: 1px solid #CDCDCD;
+}
+.formWhite button {
+	border: 1px solid #CDCDCD;
+}
+.formWhite button:hover {
+	background: #FFA31C;
+	cursor: pointer;
+}
+
+
+/*Центрирование по вертикали*/
+.middleAlignBox {
+	max-height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	/* margin-top:  определяется в JS */
+}
+
+/*
+  ==================
+ШАПКА И ОБЛОЖКА
+==================
+*/
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background: #fff;
+	z-index: 9999;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+header h1 {
+	float: left;
+	font: 400 150%/60px 'Russo One', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+nav {
+	float: right;
+	font-weight: 300;
+	text-align: right;
+	line-height: 60px;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+nav a {
+	position: relative;
+	font-size: 120%;
+	display: inline-block;
+	padding: 0 .7em;
+}
+nav a:hover {
+	background: #E8E8E8;
+	cursor: pointer;
+}
+.navIndicator {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 5px;
+	-webkit-transition: all .4s; ease
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+.linkActive .navIndicator{
+	width: 100%;
+}
+nav a[href='#services'] .navIndicator {
+	background: #FF3E3E;
+}
+nav a[href='#portpholio'] .navIndicator{
+	background: #76AEE7;
+}
+nav a[href='#about'] .navIndicator{
+	background: #565654;
+}
+nav a[href='#contacts'] .navIndicator {
+	background: #FEBA00;
+}
+.toggleNav {
+	position: absolute;
+	font-size: 200%;
+	right: 40px;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.openNav {
+	top: 0;
+}
+.openNav .toggleNav {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/*Обложка*/
+.wallpaper {
+	width: 100%;
+	height: 100vh;
+	min-height: 100%;
+	background: #E8E8E8;
+	background: url("../img/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.headline {
+	padding: 2em .3em;
+	background: rgba(255,255,255,.45);
+}
+.headline h2 {
+	font-size: 250%;
+	color: #3e3e3e;
+	margin-bottom: .4em;
+}
+.headline h3 {
+	font-size: 150%;
+}
+
+
+/*
+=======
+УСЛУГИ
+=======
+*/
+.services {
+	width: 100%;
+}
+.services aside {
+	background: #FF3E3E;
+	-webkit-box-shadow: 2px 0 5px rgba(0,0,0,.5);
+	box-shadow: 2px 0 5px rgba(0,0,0,.5);
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+.services aside p {
+	line-height: 1.1em;
+}
+.services article {
+	font-size: 120%;
+	text-align: left;
+	overflow: hidden;
+}
+.toggleService{
+	height: 33.33333vh;
+	position: relative;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.toggleService:hover {
+	background: #F2F2F2;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 10px rgba(0,0,0,.2);
+}
+.toggleService span {
+	border-bottom: 1px dotted gray;
+}
+.contentService{
+	overflow: hidden;
+	padding-left: 3%;
+	padding-right: 3%;
+	-webkit-transition: all .4s .4s;
+	-o-transition: all .4s .4s;
+	transition: all .4s .4s;
+}
+.servicesActive .toggleService {
+	height: 175px;
+}
+.servicesActive .toggleService:hover {
+	cursor: default;
+	background: #fff;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.servicesActive span {
+	border: 0;
+}
+.contentService div[class^="col"] {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.contentService img {
+	width: 100%;
+	display: block;
+}
+.contentService h4 {
+	font-size: 130%;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+.contentClose {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 200%;
+	cursor: pointer;
+}
+.contentClose:hover {
+	background: #F1F1F1;
+}
+
+
+/*
+============
+ПОРТФОЛИО
+============
+*/
+.portpholio aside {
+	background: #76AEE7;
+}
+.portpholio aside p {
+	line-height: 1.1em;
+}
+.porthpolioWorksContaier a {
+	display: block;
+	width: 20%;
+	float: left;
+	opacity: 1;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+.portpholio img {
+	width: 100%;
+	display: block;
+}
+.portpholio a:hover {
+	opacity: .8;
+}
+
+
+/*
+============
+О  АЛЕКСАНДРЕ
+============
+*/
+.about aside {
+	background: #565654;
+}
+.about aside p {
+	line-height: 1.1em;
+}
+.aboutPhoto {
+	height: calc(100vh - 50px);
+	height: -moz-calc(100vh - 50px);
+	height: -webkit-calc(100vh - 50px);
+	background-image: url("../img/about_photo.jpg");
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+
+/*
+============
+КОНТАКТЫ
+============
+*/
+.contacts aside {
+	background: #FEBA00;
+}
+.contacts p {
+	line-height: 1.1em;
+}
+.popUpContainer {
+	position: fixed;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	z-index: 9999;
+}
+.popUpWindow {
+	position: relative;
+	width: 30%;
+	padding: 3%;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+}
+.popUpClose {
+	font-size: 200%;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	cursor: pointer;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.popUpClose:hover {
+	color: #FF6C6C;
+}
+.map {
+	height: calc(100vh - 60px);
+	height: -moz-calc(100vh - 60px);
+	height: -webkit-calc(100vh - 60px);
+	z-index: 1;
+}
+.map iframe {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.mapWallpaper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(20, 20, 20, .3);
+	-webkit-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.mapWallpaper:hover {
+	background: rgba(20, 20, 20, .6);
+}
+.mapText {
+	opacity: 0;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.mapText h2 {
+	font-size: 150%;
+	color: #fff;
+	font-weight: 300;
+	display: inline-block;
+}
+.mapText span {
+	font-size: 200%;
+	color: #fff;
+	display: block;
+}
+.mapTextActive {
+	opacity: 1;
+}
+/*
+============
+ФУТЕР
+============
+*/
+footer {
+	position: fixed;
+	width: 20%;
+	bottom: -50vh;
+	z-index: 999;
+	padding-left: 5%;
+	padding-right: 2%;
+	padding-bottom: 20px;
+	color: #fff;
+	-webkit-transition: all .4s ;
+	-o-transition: all .4s ;
+	transition: all .4s ;
+}
+footer small {
+	font-size: 120%;
+	font-weight: 300;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.social a {
+	font-size: 150%;
+	display: inline-block;
+	margin-right: 2%;
+}
+footer a {
+	font-size: 70%;
+	color: #fff;
+}
+.footerActive {
+	bottom: 0 !important;
+}
+
+
+
+
+/*====================
+*******************************
+
+СТРАНИЦА ПОРТФОЛИО
+
+**********************************
+======================*/
+/*
+  ======
+ШАПКА
+=======
+*/
+.togglePortpholioNav {
+	display: block;
+	float: right;
+	font-size: 150%;
+	line-height: 60px;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.openPortpholioNav {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.portpholioLink {
+	color: #000;
+	float: left;
+	margin-left: 2%;
+	font-size: 130%;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+/*
+  ===========================
+БОКОВАЯ ПАНЕЛЬ НАВИГАЦИИ
+============================
+*/
+.portpholioSidePanel {
+	left: 0;
+	background: #383838;
+	padding: 0;
+	width: 20%;
+	z-index: 999;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.portpholioNav li{
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: 20%;
+	padding-right: 5%;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.portpholioNav a{
+	font-size: 150%;
+	color: #fff;
+	font-weight: 300;
+}
+.portpholioNav a[href='desing.html'] li[class="active"]{
+	background: #76AEE7;
+}
+.portpholioNav a[href='desing.html'] li:hover{
+	background: #76AEE7;
+}
+.portpholioNav a[href='arts.html'] li[class="active"]{
+	background: #EB5958;
+}
+.portpholioNav a[href='arts.html'] li:hover{
+	background: #EB5958;
+}
+.portpholioSwitcher {
+	margin-top: 15px;
+}
+.portpholioSwitcher li {
+	cursor: pointer;
+	color: #fff;
+	font-size: 120%;
+	font-weight: 300;	
+	padding-top: .2em;
+	padding-bottom: .2em;
+	padding-left: 20%;
+	padding-right: 5%;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.portpholioSwitcher li:hover {
+	background: #6D6D6D;
+}
+.portpholioSwitcher span {
+	border-bottom: 1px dotted #fff;
+}
+.activeSwitcher {
+	background: #466669;
+}
+.activeSwitcher:hover {
+	cursor: default !important;
+	background: #466669 !important;
+}
+.activeSwitcher span {
+	border: none;
+}
+
+
+/*
+=======
+РАБОТЫ
+========
+*/
+.worksContainer {
+	padding-top: 60px;
+	padding-left: 20%;
+}
+.work {
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	overflow: hidden;
+	-webkit-transition: all .8s;
+	-o-transition: all .8s;
+	transition: all .8s;
+}
+.work:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+.work span {
+	display: inline-block;
+	font-size: 120%;
+	font-weight: 300;
+	padding: .4em;
+	margin-bottom: 10px;
+}
+.work img {
+	width: 100%;
+	display: block;
+}
+
+/*Скрыть работу*/
+.hideWork {
+	width: 0;
+	opacity: 0;
+}
+
+/*
+=======
+ПРОЕКТ
+========
+*/
+.projectContainer {
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #383838;
+	z-index: 9999;
+}
+.projectAside {
+	right: 0;
+	left: auto;
+	padding-right: 5%;
+	padding-left: 3%;
+	background: #191919;
+}
+.projectAside h2 {
+	font-size: 180%;
+	font-weight: 500;
+}
+.projectAside p {
+	font-weight: 300;
+	margin-bottom: 5px;
+	font-size: 100%;
+	line-height: normal;
+}
+.projectAside b {
+	font-weight: 500;
+}
+.projectSliderContainer {
+	width: 75%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+/*Карусель*/
+.carouselContainer {
+	position: absolute;
+	width: 100%;
+}
+.owl-carousel img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.owl-buttons div{
+	position: absolute;
+	top: 50%;
+}
+.owl-prev {
+	left: 0;
+}
+.owl-next {
+	right: 0;
+}
+/*Закрыть проект*/
+.projectClose {
+	position: absolute;
+	color: #fff;
+	font-size: 200%;
+	top: 15px;
+	right: 15px;
+	opacity: .8;
+}
+.projectClose:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+/*
+=========
+КАРТИНЫ
+=========
+*/
+.artImg {
+	max-width: 100%;
+	max-height: 100%;
+}
+.floater {
+	float: left;
+	width: 100%;
+	height: 50%;
+}
+/*
+
+
+
+/*
+=================
+ФУТЕР ПОРТФОЛИО
+==================
+*/
+.portpholioFooter {
+	bottom: 0;
+	padding-left: 4%;
+}
