@@ -38,6 +38,13 @@ $(function() {
 		});
 	});
 
+	/* ======= Установить отрицательный маргин для плавающего элемента ====*/
+	$(window).load(function () {
+		var floaterMargin = $(".artImg").height();
+		$(".floater").css("margin-top", - floaterMargin/2 + "px");
+	})
+
+
 
 
 
@@ -338,17 +345,6 @@ $(function() {
 	      paginationSpeed : 400,
 	      singleItem:true
   	});
-
-	/* ======= Установить отрицательный маргин для плавающего элемента ====*/
-	$(function () {
-		var carouselHeight = $(".carouselBox").height();
-		console.log(carouselHeight)
-	})
-	$(function () {
-		var artImgHeight = $(".artImg").height();
-		console.log(artImgHeight);
-		$(".floater").css("margin-top", - artImgHeight/2 + "px")
-	})
 
 });
 
