@@ -341,6 +341,7 @@ $(function() {
 	/* ===== Карусель портфолио ====== */
 	$("#portpholioCarousel").owlCarousel({
 	      navigation : true, 
+	      pagination : false,
 	      slideSpeed : 300,
 	      paginationSpeed : 400,
 	      singleItem:true

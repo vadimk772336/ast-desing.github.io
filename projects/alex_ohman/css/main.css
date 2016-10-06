@@ -758,8 +758,9 @@ footer a {
 	width: 100%;
 	height: 50%;
 }
-/*
-
+.owl-theme .owl-controls {
+	margin: 0;
+}
 
 
 /*
