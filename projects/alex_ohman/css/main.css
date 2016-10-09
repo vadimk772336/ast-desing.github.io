@@ -234,6 +234,7 @@ nav a[href='#contacts'] .navIndicator {
 	background-repeat: no-repeat;
 }
 .headline {
+	text-align: center;
 	padding: 2em .3em;
 	background: rgba(255,255,255,.45);
 }
@@ -761,7 +762,9 @@ footer a {
 .owl-theme .owl-controls {
 	margin: 0;
 }
-
+.owl-pagination {
+	display: none;
+}
 
 /*
 =================

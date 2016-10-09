@@ -156,6 +156,9 @@
 	.hideWork {
 		width: 0;
 	}
+	.owl-pagination {
+		display: block;
+	}
 }
 
 
