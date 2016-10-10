@@ -171,11 +171,13 @@ form input {
 	width: 100%;
 	padding: .4em .7em;
 	margin-bottom: 20px;
+	border: 1px solid #bdbdbd;
 }
 form textarea {
 	width: 100%;
 	margin-bottom: 20px;
 	height: 190px;
+	border: 1px solid #bdbdbd;
 }
 form button {
 	width: 100%;
