@@ -111,8 +111,6 @@ $(function() {
 		var obj = $(this).attr("rel");
  		var bl = $(sl).find("div.slide_"+obj);
 
- 		console.log(sl);
-
 		$(sl).find('.sld_switcher').each(function() {
 			$(this).removeClass('icons_btn_active');
 		}); 

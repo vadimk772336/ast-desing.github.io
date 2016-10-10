@@ -408,6 +408,7 @@ header {
 .about_project {
 	-webkit-background-size: cover;
 	background-size: cover;
+	background-position: center center;
 }
 
 	/*Значимые проекты футер*/
