@@ -217,10 +217,10 @@ $(function() {
 
 	//Анимация
 	$(window).ready(function() {
-
 		$(".animation_fadeIn").animated("fadeIn");
-
 	});
+
+	
 });
 
 $(window).load(function() {
