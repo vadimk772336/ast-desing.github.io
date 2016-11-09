@@ -1,0 +1,120 @@
+/* Вспомогательные стили*/
+@import url('util/reset.css');
+@import url('util/clearfix.css');
+@import url('util/loader.css');
+
+/*
+===================
+ГЛОБАЛЬНЫЕ СТИЛИ
+===================
+*/
+body {
+	font-family: Roboto;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* Центрирование элемента*/
+.middleAlign {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	/* margin-top:  определяется в JS */
+}
+/*
+===================
+ШАПКА
+===================
+*/
+header {
+	background: #f3f3f3;
+	position: relative;
+}
+.siteTitle {
+	float: left;
+	margin-left: 3%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+h1 {
+	font-size: 150%;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+h2 {
+	color: #797979;
+}
+.contacts {
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	margin-top: -.5em;
+	font-size: 150%;
+}
+.contacts li {
+	display: inline-block;
+	margin-left: 10px;
+}
+.contacts a {
+	font-size: inherit;
+	color: #a7a7a7;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+.contacts a[href*=mailto]:hover{
+	color: #dc483b;
+}
+.contacts a[href*=vk]:hover{
+	color: #4b74a5;
+}
+/*
+===================
+РАБОТЫ
+===================
+*/
+a {
+	display: block;
+}
+.project {
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+.project img {
+	width: 100%;
+	display: block;
+}
+.project h3 {
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	font-size: 150%;
+	padding: .8em .6em;
+	background: rgba(0,0,0,.3);
+}
+.projectDescription {
+	display: none;
+	font-weight: 300;
+	color: #fff;
+	text-align: center;
+	padding: .3em .6em;
+	background: rgba(0,0,0,.3);
+}
+.tags {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding: 3%;
+	z-index: 2;
+}
+.tags li {
+	display: inline-block;
+	margin-right: 2%;
+	padding: .3em .4em;
+	background: rgba(255,255,255,.7);
+}
