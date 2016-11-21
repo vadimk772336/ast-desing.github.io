@@ -17,7 +17,7 @@ $(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 	//Вертикальное выравнивание элемента в родителе
-	$(window).load(function () {
+	$(function () {
 		$(".center_align_box").each(function() {
 			var boxHeight = $(this).height();
 			$(this).css("margin-top", - boxHeight/2);
@@ -65,9 +65,11 @@ $(function() {
 	$(document).ready(function() {
 		$('a[href^="#"]').click(function(){
 			var el = $(this).attr('href');
+			if (el === "#subscribe_popup") return;
 			$('body').animate({
 				scrollTop: $(el).offset().top}, 700);
 			return false; 
+
 		});
 	});
 
@@ -98,10 +100,10 @@ $(function() {
 		$(this).hide();
 		$(".about_more").fadeIn();
   		//Переустановка точек waypoint 
- 		setTimeout(function() {
- 			Waypoint.refreshAll();
- 		}, 800);			
-	})
+  		setTimeout(function() {
+  			Waypoint.refreshAll();
+  		}, 800);			
+  	})
 
 
 	//Слайдеры
@@ -109,17 +111,17 @@ $(function() {
 
 		var sl = $(this).closest(".slider"); 
 		var obj = $(this).attr("rel");
- 		var bl = $(sl).find("div.slide_"+obj);
+		var bl = $(sl).find("div.slide_"+obj);
 
 		$(sl).find('.sld_switcher').each(function() {
 			$(this).removeClass('icons_btn_active');
 		}); 
- 		$(this).addClass("icons_btn_active");
- 		$(sl).find('[class *= "slide_"]').each(function() {
- 			$(this).fadeOut(200);
- 		}); 
- 		$(bl).delay(200).fadeIn(200);
- 	});
+		$(this).addClass("icons_btn_active");
+		$(sl).find('[class *= "slide_"]').each(function() {
+			$(this).fadeOut(200);
+		}); 
+		$(bl).delay(200).fadeIn(200);
+	});
 
 	//Значимые проекты
 	$('.about_project').click(function() {
@@ -130,25 +132,25 @@ $(function() {
 	//Сортировка проектов портфолио
 	$(".switcher_portpholio li").click(function() {
 		var obj = $(this).attr("id");
- 		var bl = $(".portpholio").find("." + obj);
+		var bl = $(".portpholio").find("." + obj);
 
 		$(".portpholio").find('li').each(function() {
 			$(this).removeClass('switcher_portpholio_active');
 		}); 
 
- 		$(this).addClass("switcher_portpholio_active");
+		$(this).addClass("switcher_portpholio_active");
 		$(".port_proj").fadeOut();
- 		$(bl).fadeIn();
+		$(bl).fadeIn();
 
- 		if (obj == "all"){
- 			$(".port_proj").fadeIn();
- 		}
+		if (obj == "all"){
+			$(".port_proj").fadeIn();
+		}
 
   		//Переустановка точек waypoint 
- 		setTimeout(function() {
- 			Waypoint.refreshAll();
- 		}, 800);		
- 	});
+  		setTimeout(function() {
+  			Waypoint.refreshAll();
+  		}, 800);		
+  	});
 
 	//Активный проект портфолио
 	$('.project-container').mouseenter(function() {
@@ -160,7 +162,13 @@ $(function() {
 
 	//Открыть окно подписки
 	$(function () {
-		$(window).load(function () {
+		$(".subscribe_btn").magnificPopup({
+			removalDelay: 300,
+			mainClass: 'mfp-fade',
+			overflowY: "scroll"
+		});
+
+		/*$(window).load(function () {
 			$(".pop_up_container").hide();
 		});
 
@@ -169,7 +177,7 @@ $(function() {
 		})
 		$(".pop_up_close").click(function () {
 			$(".pop_up_container").fadeOut();
-		});
+		});*/
 	});
 
 	//Диаграммы
@@ -221,10 +229,4 @@ $(function() {
 	});
 
 	
-});
-
-$(window).load(function() {
-
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
 });

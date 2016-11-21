@@ -18,30 +18,23 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Цвет панели браузера Start -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<!-- Цвет панели браузера End -->
 
 	<!-- Шрифты -->
-	<link type="text/css" rel="stylesheet" href="css/font.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet" type="text/css" >
 	<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet" type="text/css" >
 
-	<!-- Иконки -->
-	<link type="text/css" rel="stylesheet" href="libs/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-	<link type="text/css" rel="stylesheet" href="libs/pe-icon-7-stroke/css/helper.css">
-	<link type="text/css" rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
-	<link type="text/css" rel="stylesheet" href="libs/animate/animate.css">
-
-	<!-- Диаграммы -->
-	<link type="text/css" href="libs/circliful/css/jquery.circliful.css" rel="stylesheet" >
-	
-	<!-- Owl  carousel-->
-	<link type="text/css" rel="stylesheet" href="libs/owl/owl.carousel.css">
-	<link type="text/css" rel="stylesheet" href="libs/owl/owl.theme.css">
-	
-	<link type="text/css" rel="stylesheet" href="css/main.css">
-	<link type="text/css" rel="stylesheet" href="css/media.css">
+	<!-- Стили -->
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link type="text/css" rel="stylesheet" href="css/main.min.css">
 </head>
 
 
@@ -80,7 +73,7 @@
 		<p>Проектирование веб-приложений с прекрасным дизайном и их дальнейшая поддержка. </p>
 	</div>
 </section>
-<div class="slidedown hidden-sm hidden-xs"><a href='#about-lnk' class="icons icon_slidedown fa fa-angle-down" aria-hidden="true"></a></div>
+<div class="slidedown hidden-sm hidden-xs  animation_fadeIn"><a href='#about-lnk' class="icons icon_slidedown fa fa-angle-down" aria-hidden="true"></a></div>
 
 
 
@@ -337,7 +330,7 @@
 ============
 ПОРТФОЛИО
 ============
- -->
+-->
 <section class="portpholio">
 	<div class="row_padding_top container">
 		<a class='nav_anchor' id='portpholio-lnk'></a>
@@ -714,7 +707,7 @@
 
 			</div>
 		</div>
-			
+
 	</div>
 </section>
 
@@ -725,7 +718,7 @@
 			<div class="col-md-12">
 				<div class="portpholio_footer">
 					<p class="animation_fadeIn">Хотите всегда быть в курсе полседних новостей?</p>
-					<span class="btn btn_white animation_fadeIn subscribe_btn">Подписаться!</span>
+					<a href="#subscribe_popup" class="btn btn_white animation_fadeIn subscribe_btn">Подписаться!</a>
 				</div>
 			</div>
 		</div>
@@ -733,18 +726,14 @@
 </div>
 
 <!-- Страница подписки -->
-<div class="pop_up_container">
-	<div class="center_align_box">
-		<div class="pop_up_window">
-			<i class="pop_up_close pe-7s-close" aria-hidden="true"></i>
-			<form class="contact_form" action="#" method="post">
-				<legend>Укажите Вашу почту</legend>
-				<input type="email" name="phone" placeholder="Электронная почта" required>
-				<button type="submit" name="submit">Подписаться</button>
-			</form>
-		</div>
-	</div>
+<div style="display: none;">
+	<form id="subscribe_popup" class="contact_form subscribe_form" action="#" method="post">
+		<legend>Укажите Вашу почту</legend>
+		<input type="email" name="phone" placeholder="Электронная почта" required>
+		<button type="submit" name="submit">Подписаться</button>
+	</form>
 </div>
+
 
 
 
@@ -752,7 +741,7 @@
 ============
 КОМАНДА
 ============
- -->
+-->
 <section class="team container row_padding_top row_padding_bottom animation_fadeIn">
 	<a class='nav_anchor' id='team-lnk'></a>
 
@@ -889,7 +878,7 @@
 
 <!-- Команда футер -->
 <section class="container-fluid team_footer ">
-	<p class="animation_fadeIn">Вы уже заинтересованные? Давайте поговорим!</p>
+	<h3 class="animation_fadeIn">Вы уже заинтересованные? Давайте поговорим!</h3>
 	<a href="#contact-form-lnk"><span class="btn btn_white animation_fadeIn">Написать нам</span></a>
 </section>
 
@@ -899,7 +888,7 @@
 ============
 КОНТАКТЫ
 ============
- -->
+-->
 <section class="contacts animation_fadeIn">
 	<a class='nav_anchor' id='contacts-lnk'></a>
 	<div class="row_padding_top row_padding_bottom ">
@@ -965,11 +954,14 @@
 ============
 ФОРМА
 ============
- -->
+-->
 <section class="form_container row_padding_top row_padding_bottom animation_fadeIn">
 	<a class='nav_anchor' id='contact-form-lnk'></a>
 	<form action="#" class="contact_form">
 		<fieldset>
+			<legend>
+				Напишите нам!
+			</legend>
 			<div class='form_collums'>
 				<input type="text" name="user_name" placeholder="Ваше имя" required>
 			</div>
@@ -993,7 +985,7 @@
 ============
 КАРТА
 ============
- -->
+-->
 <div class="map animation_fadeIn">
 
 	<div class="map_wallpaper">
@@ -1003,7 +995,7 @@
 		</div>
 	</div>
 
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17942.789953331012!2d49.1018681934076!3d55.79586431036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b0126a895b9ce7d!2z0JrQsNC30LDQvdGB0LrQuNC5INC60YDQtdC80LvRjA!5e0!3m2!1sru!2sru!4v1469124843455" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17942.789953331012!2d49.1018681934076!3d55.79586431036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b0126a895b9ce7d!2z0JrQsNC30LDQvdGB0LrQuNC5INC60YDQtdC80LvRjA!5e0!3m2!1sru!2sru!4v1469124843455" allowfullscreen></iframe>
 
 </div>
 
@@ -1013,7 +1005,7 @@
 ============
 ФУТЕР
 ============
- -->
+-->
 <footer class="row_padding_top row_padding_bottom animation_fadeIn">
 
 	<div class="footer-logo">bouncy</div>
@@ -1033,10 +1025,7 @@
 
 
 
-<div class="hidden"></div>
-<div class="loader">
-	<div class="loader_inner"></div>
-</div>
+
 
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -1045,14 +1034,7 @@
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
 	
-	<script src="libs/modernizr/modernizr.js"></script>
-	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
-	<script src="libs/waypoints/waypoints.min.js"></script>
-	<script src="libs/animate/animate-css.js"></script>
-	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
-	<script src="libs/circliful/js/jquery.circliful.min.js"></script>
-	<script src="libs/masonry//masonry.pkgd.min.js"></script>
-	<script src="libs/owl/owl.carousel.js"></script>
+	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
 	
 </body>
