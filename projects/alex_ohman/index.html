@@ -22,15 +22,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css">
 
 	<link type="text/css" rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/fonts.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/media.min.css">
 
-	<script src="libs/modernizr/modernizr.js"></script>
+	<script src="libs/modernizr/modernizr.min.js"></script>
 
 </head>
 
@@ -52,22 +52,22 @@
 
 	<nav>
 		<ul>
-			<a href="#services">
-				<li>Услуги</li>
+			<li>
+				<a href="#services">Услуги</a>
 				<span class="navIndicator"></span>
-			</a>
-			<a href="#portpholio">
-				<li>Портфолио</li>
+			</li>
+			<li>
+				<a href="#portpholio">Портфолио</a>
 				<span class="navIndicator"></span>
-			</a>
-			<a href="#about">
-				<li>О себе</li>
+			</li>
+			<li>
+				<a href="#about">О себе</a>
 				<span class="navIndicator"></span>
-			</a>
-			<a href="#contacts">
-				<li>Контакты</li>
+			</li>
+			<li>
+				<a href="#contacts">Контакты</a>
 				<span class="navIndicator"></span>
-			</a>
+			</li>
 		</ul>
 		<span class='toggleNav visible-sm visible-xs'><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
 	</nav>	
@@ -100,7 +100,7 @@
 			<article>
 				<div class="toggleService">
 					<div class="middleAlignBox">
-						<img  src="img/uslugi_desing.png">
+						<img src="img/uslugi_desing.png"  alt="Услуги">
 						<h3>
 							<span>Дизайн интерьера</span>
 						</h3>
@@ -108,7 +108,7 @@
 					</div>
 				</div>
 
-				<div  id="servicesBlock_1" class="contentService" rel="1">
+				<div  id="servicesBlock_1" class="contentService" data-servises-row-number="1">
 					<div class="row">
 
 						<div class="col-md-6">
@@ -124,122 +124,123 @@
 									<input type="text" name="name" placeholder="Ваше имя" required>
 									<input type="email" name="email" placeholder="Адрес электронной почты">
 									<input type="tel" name="phone" placeholder="Номер телефона" required>
-									<select name="quantity" required>
+									<select name="quantity">
 										<option value="1" selected>Дизайн помещения</option>
 										<option value="2">Архитектура</option>
 										<option value="3">Ландшафтный дизайн</option>
-										<textarea name="comments" placeholder="Дополнительный коментарий"></textarea>			    		
-									</fieldset>
-									<button class="btn" type="submit" name="submit">Заказать</button>
-								</form>
-							</div>
-
-						</div>	
-
-						<!-- Иконка закрыть -->
-						<div class="contentClose">
-							<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-						</div>		
-					</div>
-				</article>
-
-				<article>
-					<div class="toggleService">
-						<div class="middleAlignBox">
-							<img src="img/uslugi_arts.png">
-							<h3>
-								<span>Картины на заказ</span>
-							</h3>
-							<p>Разнообразный и богатый опыт организационной деятельности.</p>
+									</select>
+									<textarea name="comments" placeholder="Дополнительный коментарий"></textarea>			    		
+								</fieldset>
+								<button class="btn" type="submit" name="submit">Заказать</button>
+							</form>
 						</div>
-					</div>
-
-					<div  id="servicesBlock_2" class="contentService" rel="2">
-						<div class="row">
-
-							<div class="col-md-6">
-								<h4>Украсьте свой интерьер!</h4>
-								<p>Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия. Равным образом укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития..</p>
-								<img src="img/services_art.jpg" alt="Картина">						
-							</div>
-
-							<div class="col-md-6">
-								<form class="formWhite" action="#" method="post">
-									<fieldset>
-										<legend>Заказать картину</legend>
-										<input type="text" name="name" placeholder="Ваше имя" required>
-										<input type="email" name="email" placeholder="Адрес электронной почты">
-										<input type="tel" name="phone" placeholder="Номер телефона" required>
-										<select name="quantity" required>
-											<option value="1" selected>50x40 см</option>
-											<option value="2">40x50 см</option>
-											<option value="3">50x60 см</option>
-											<option value="4">60x70 см</option>
-											<option value="5">70x80 см</option>
-										</select>
-										<textarea name="comments" placeholder="Дополнительный коментарий"></textarea>		    		
-									</fieldset>
-									<button class="btn" type="submit" name="submit">Заказать</button>
-								</form>
-							</div>
-
-						</div>	
-
-						<!-- Иконка закрыть -->
-						<div class="contentClose">
-							<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-						</div>				
-					</div>	
-				</article>
-
-				<article>
-					<div class="toggleService">
-						<div class="middleAlignBox">
-							<img src="img/uslugi_lessons.png">
-							<h3>
-								<span>Уроки живописи</span>
-							</h3>
-							<p>Консультация с широким активом позволяет оценить значение.</p>
-						</div>
-					</div>
-
-					<div id="servicesBlock_3" class="contentService" rel="3">
-						<div class="row">
-
-							<div class="col-md-6">
-								<h4>Украсьте свой интерьер!</h4>
-								<p>Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия.</p>
-								<form class="formWhite" action="#" method="post">
-									<fieldset>
-										<legend>Записаться на индивидуальное занятие</legend>
-										<input type="text" name="name" placeholder="Ваше имя" required>
-										<input type="tel" name="phone" placeholder="Номер телефон" required>
-									</fieldset>
-									<button class="btn" type="submit" name="submit">Записаться</button>
-								</form>					
-							</div>
-
-							<div class="col-md-6">
-								<h4>Занятия для детей</h4>
-								<p> С другой стороны консультация с широким активом позволяет оценить значение систем массового участия. Задача организации.</p>
-								<div class="shleude">
-									Каждую пятницу
-									<time>c 17:00-17:45</time>
-								</div>
-								<img src="img/services_masterclass.jpg" alt="">
-							</div>
-						</div>
-
-						<!-- Иконка закрыть -->
-						<div class="contentClose">
-							<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-						</div>	
 
 					</div>	
-				</article>
-			</div>
+
+					<!-- Иконка закрыть -->
+					<div class="contentClose">
+						<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+					</div>		
+				</div>
+			</article>
+
+			<article>
+				<div class="toggleService">
+					<div class="middleAlignBox">
+						<img src="img/uslugi_arts.png" alt="Картина">
+						<h3>
+							<span>Картины на заказ</span>
+						</h3>
+						<p>Разнообразный и богатый опыт организационной деятельности.</p>
+					</div>
+				</div>
+
+				<div  id="servicesBlock_2" class="contentService" data-servises-row-number="2">
+					<div class="row">
+
+						<div class="col-md-6">
+							<h4>Украсьте свой интерьер!</h4>
+							<p>Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия. Равным образом укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития..</p>
+							<img src="img/services_art.jpg" alt="Картина">						
+						</div>
+
+						<div class="col-md-6">
+							<form class="formWhite" action="#" method="post">
+								<fieldset>
+									<legend>Заказать картину</legend>
+									<input type="text" name="name" placeholder="Ваше имя" required>
+									<input type="email" name="email" placeholder="Адрес электронной почты">
+									<input type="tel" name="phone" placeholder="Номер телефона" required>
+									<select name="quantity">
+										<option value="1" selected>50x40 см</option>
+										<option value="2">40x50 см</option>
+										<option value="3">50x60 см</option>
+										<option value="4">60x70 см</option>
+										<option value="5">70x80 см</option>
+									</select>
+									<textarea name="comments" placeholder="Дополнительный коментарий"></textarea>		    		
+								</fieldset>
+								<button class="btn" type="submit" name="submit">Заказать</button>
+							</form>
+						</div>
+
+					</div>	
+
+					<!-- Иконка закрыть -->
+					<div class="contentClose">
+						<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+					</div>				
+				</div>	
+			</article>
+
+			<article>
+				<div class="toggleService">
+					<div class="middleAlignBox">
+						<img src="img/uslugi_lessons.png" alt="Урок">
+						<h3>
+							<span>Уроки живописи</span>
+						</h3>
+						<p>Консультация с широким активом позволяет оценить значение.</p>
+					</div>
+				</div>
+
+				<div id="servicesBlock_3" class="contentService" data-servises-row-number="3">
+					<div class="row">
+
+						<div class="col-md-6">
+							<h4>Украсьте свой интерьер!</h4>
+							<p>Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия.</p>
+							<form class="formWhite" action="#" method="post">
+								<fieldset>
+									<legend>Записаться на индивидуальное занятие</legend>
+									<input type="text" name="name" placeholder="Ваше имя" required>
+									<input type="tel" name="phone" placeholder="Номер телефон" required>
+								</fieldset>
+								<button class="btn" type="submit" name="submit">Записаться</button>
+							</form>					
+						</div>
+
+						<div class="col-md-6">
+							<h4>Занятия для детей</h4>
+							<p> С другой стороны консультация с широким активом позволяет оценить значение систем массового участия. Задача организации.</p>
+							<div class="shleude">
+								Каждую пятницу
+								c 17:00-17:45
+							</div>
+							<img src="img/services_masterclass.jpg" alt="">
+						</div>
+					</div>
+
+					<!-- Иконка закрыть -->
+					<div class="contentClose">
+						<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+					</div>	
+
+				</div>	
+			</article>
 		</div>
-	</section>
+	</div>
+</section>
 
 
 
@@ -362,11 +363,13 @@
 			<div class="popUpWindow">
 				<i class="popUpClose fa fa-times" aria-hidden="true"></i>
 				<form class="formWhite" action="#" method="post">
-					<legend>Задать вопрос</legend>
-					<input type="text" name="name" placeholder="Имя" required>
-					<input type="email" name="phone" placeholder="Электронная почта" required>
-					<textarea name="comments" placeholder="Сообщение"></textarea>
-					<button class="btn " type="submit" name="submit">Написать</button>
+					<fieldset>					
+						<legend>Задать вопрос</legend>
+						<input type="text" name="name" placeholder="Имя" required>
+						<input type="email" name="phone" placeholder="Электронная почта" required>
+						<textarea name="comments" placeholder="Сообщение"></textarea>
+						<button class="btn " type="submit" name="submit">Написать</button>
+					</fieldset>
 				</form>
 			</div>
 		</div>
@@ -378,10 +381,12 @@
 			<div class="popUpWindow">
 				<i class="popUpClose fa fa-times" aria-hidden="true"></i>
 				<form class="formWhite" action="#" method="post">
-					<legend>Заказать звонок</legend>
-					<input type="text" name="name" placeholder="Имя" required>
-					<input type="tel" name="phone" placeholder="Номер телефона" required>
-					<button class="btn btn-white btn-con" type="submit" name="submit">Позвоните мне</button>
+					<fieldset>
+						<legend>Заказать звонок</legend>
+						<input type="text" name="name" placeholder="Имя" required>
+						<input type="tel" name="phone" placeholder="Номер телефона" required>
+						<button class="btn btn-white btn-con" type="submit" name="submit">Позвоните мне</button>
+					</fieldset>
 				</form>
 			</div>
 		</div>
@@ -405,7 +410,11 @@
 		<a  href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
 	</div>
 
-	<small><a href="#">Сайт сделан в студии &laquoАСТ-Дизайн&raquo</a></small>
+	<small>
+		<a href="https://ast-desing.github.io/projects/my_portpholio/">Сайт сделан в студии <br>
+			АСТ-Дизайн
+		</a>
+	</small>
 </footer>
 
 
@@ -422,8 +431,8 @@
 
 <script src="libs/jquery/jquery-1.11.2.min.js"></script>
 <script src="libs/waypoints/waypoints.min.js"></script>
-<script src="libs/owl-carousel/owl.carousel.js"></script>
-<script src="js/common.js"></script>
+<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/common.min.js"></script>
 
 </body>
 </html>
