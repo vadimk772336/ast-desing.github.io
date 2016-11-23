@@ -110,7 +110,7 @@ $(function() {
 	$(".sld_switcher").click(function() {
 
 		var sl = $(this).closest(".slider"); 
-		var obj = $(this).attr("rel");
+		var obj = $(this).attr("data-slide-number");
 		var bl = $(sl).find("div.slide_"+obj);
 
 		$(sl).find('.sld_switcher').each(function() {
@@ -163,9 +163,9 @@ $(function() {
 	//Открыть окно подписки
 	$(function () {
 		$(".subscribe_btn").magnificPopup({
-			removalDelay: 300,
-			mainClass: 'mfp-fade',
-			overflowY: "scroll"
+			//removalDelay: 300,
+			//mainClass: 'mfp-fade',
+			//overflowY: "scroll"
 		});
 
 		/*$(window).load(function () {
